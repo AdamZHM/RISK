@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.duke.ece651.risc.controller.MenuController">
+   <children>
+      <ImageView fx:id="BG" fitHeight="800.0" fitWidth="1280.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../image/background.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="createBtn" layoutX="150.0" layoutY="250.0" mnemonicParsing="false" onAction="#createRoomPressed" prefHeight="300.0" prefWidth="250.0" text="Create Room" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="joinBtn" layoutX="515.0" layoutY="250.0" mnemonicParsing="false" onAction="#joinRoomPressed" prefHeight="300.0" prefWidth="250.0" text="Join Room" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="resumeBtn" layoutX="880.0" layoutY="250.0" mnemonicParsing="false" onAction="#resumePressed" prefHeight="300.0" prefWidth="250.0" text="Resume" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="48.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+Oz,soldier,10
+move
+Oz,Narnia,soldier,0
+attack
+Oz,Scadrial,soldier,0
+commit
+attack
+Scadrial,Roshar,soldier,1
+attack
+Scadrial,Elantris,soldier,4
+commit
+attack
+Elantris,Narnia,soldier,1
+commit

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.duke.ece651.risc.controller.MenuController">
+   <children>
+      <ImageView fx:id="BG" fitHeight="800.0" fitWidth="1280.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../image/mapBG.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backBtn" fitHeight="100.0" fitWidth="100.0" layoutX="1160.0" layoutY="10.0" onMouseClicked="#returnToStart" pickOnBounds="true">
+         <image>
+            <Image url="@../image/return.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="score" alignment="CENTER" layoutX="240.0" layoutY="50.0" prefHeight="100.0" prefWidth="800.0" text="Score: " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="createRoomImg" fitHeight="300.0" fitWidth="260.0" layoutX="130.0" layoutY="300.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../image/btn1.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="createBtn" layoutX="130.0" layoutY="300.0" mnemonicParsing="false" onAction="#createRoomPressed" opacity="0.0" prefHeight="300.0" prefWidth="260.0" text="Create Room" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="0.1" />
+         </font>
+      </Button>
+      <ImageView fx:id="JoinRoomImg" fitHeight="300.0" fitWidth="260.0" layoutX="510.0" layoutY="300.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../image/btn2.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="joinBtn" layoutX="510.0" layoutY="300.0" mnemonicParsing="false" onAction="#joinRoomPressed" opacity="0.0" prefHeight="300.0" prefWidth="260.0" text="Join Room" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="0.1" />
+         </font>
+      </Button>
+      <ImageView fx:id="ResumeImg" fitHeight="300.0" fitWidth="260.0" layoutX="890.0" layoutY="300.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../image/btn3.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="resumeBtn" layoutX="890.0" layoutY="300.0" mnemonicParsing="false" onAction="#resumePressed" opacity="0.0" prefHeight="300.0" prefWidth="260.0" text="Resume" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="0.1" />
+         </font>
+      </Button>
+      <Label fx:id="menuPrompt" alignment="CENTER" layoutX="440.0" layoutY="650.0" prefHeight="100.0" prefWidth="400.0" text="Test" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="CreateRoomLabel" alignment="CENTER" layoutX="60.0" layoutY="170.0" prefHeight="100.0" prefWidth="400.0" text="Create Room" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="JoinRoomLabel" alignment="CENTER" layoutX="440.0" layoutY="170.0" prefHeight="100.0" prefWidth="400.0" text="Join Room" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="ResumeLabel" alignment="CENTER" layoutX="820.0" layoutY="170.0" prefHeight="100.0" prefWidth="400.0" text="Resume" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Nadeem Regular" size="36.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="createRoomInfo" layoutX="340.0" layoutY="170.0" prefHeight="500.0" prefWidth="600.0" visible="false">
+         <children>
+            <ImageView fx:id="CreateRoomPanel" fitHeight="500.0" fitWidth="600.0" opacity="0.9" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/panelBG.jpeg" />
+               </image>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="100.0" prefHeight="100.0" prefWidth="400.0" text="Create Room" textAlignment="CENTER" textFill="#403e3a" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="enterRoomName" alignment="CENTER" layoutX="100.0" layoutY="140.0" prefHeight="100.0" prefWidth="400.0" promptText="Room Name">
+               <font>
+                  <Font name="Nadeem Regular" size="36.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="enterCapacity" layoutX="100.0" layoutY="270.0" prefHeight="100.0" prefWidth="400.0" />
+            <Label fx:id="createRoomPrompt" alignment="CENTER" layoutX="100.0" layoutY="350.0" prefHeight="100.0" prefWidth="400.0" text="Test" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="submitRoomInfo" layoutX="420.0" layoutY="420.0" mnemonicParsing="false" onAction="#submitCreateInfo" prefHeight="80.0" prefWidth="180.0" text="Submit" textAlignment="CENTER">
+               <font>
+                  <Font name="Nadeem Regular" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

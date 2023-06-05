@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.duke.ece651.risc.controller.MapController">
+   <children>
+      <ImageView fx:id="mapBG" fitHeight="800.0" fitWidth="1280.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../image/risk_map_v1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="returnBtn" fitHeight="100.0" fitWidth="100.0" layoutX="1180.0" onMouseClicked="#returnToMenu" pickOnBounds="true">
+         <image>
+            <Image url="@../image/return.png" />
+         </image>
+      </ImageView>
+      <HBox fx:id="mapTitle" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="100.0" prefWidth="1100.0" spacing="50.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="foodLabel" alignment="CENTER" style="-fx-border-color: #000000; -fx-border-width: 3;" text="Food: 0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="36.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="techResourceLabel" alignment="CENTER" style="-fx-border-color: #000000; -fx-border-width: 3;" text="Tech Resource: 0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="36.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="techLevelLabel" alignment="CENTER" style="-fx-border-color: #000000; -fx-border-width: 3;" text="Tech Level: 1" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="36.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="gameMap" layoutX="58.0" layoutY="98.0" prefHeight="698.0" prefWidth="782.0">
+         <children>
+            <Line endX="100.0" layoutX="176.0" layoutY="220.0" startX="-100.0" strokeWidth="5.0" />
+            <Line endX="100.0" layoutX="388.0" layoutY="219.0" startX="-100.0" strokeWidth="5.0" />
+            <Line endX="-99.99996948242188" endY="149.6644287109375" layoutX="601.0" layoutY="240.0" startX="-126.33831787109375" startY="7.110626220703125" strokeWidth="5.0" />
+            <Line endX="100.0" layoutX="563.0" layoutY="223.0" startX="-100.0" strokeWidth="5.0" />
+            <Line endX="-241.28408813476562" endY="119.62158203125" layoutX="549.0" layoutY="260.0" startX="-99.99996948242188" startY="-42.92303466796875" strokeWidth="5.0" />
+            <Line endX="-241.28408813476562" endY="119.62158203125" layoutX="323.0" layoutY="299.0" startX="-72.739501953125" startY="85.54812622070312" strokeWidth="5.0" />
+            <Line endX="-266.93304443359375" endY="127.07391357421875" layoutX="536.0" layoutY="108.0" startX="-266.93304443359375" startY="257.4716491699219" strokeWidth="5.0" />
+            <Line endX="-2.99993896484375" endY="248.0" layoutX="527.0" layoutY="157.0" startX="-241.28408813476562" startY="247.52365112304688" strokeWidth="5.0" />
+            <Line endX="-225.62449645996094" endY="108.11672973632812" layoutX="268.0" layoutY="141.0" startX="-225.62449645996094" startY="258.57568359375" strokeWidth="5.0" />
+            <Line endX="-241.28408813476562" endY="119.62158203125" layoutX="767.0" layoutY="255.0" startX="-102.18878173828125" startY="-14.861846923828125" strokeWidth="5.0" />
+            <Line endX="-351.3758850097656" endY="351.5940246582031" layoutX="412.0" layoutY="54.0" startX="-162.80068969726562" startY="179.06777954101562" strokeWidth="5.0" />
+            <Line endX="200.0" endY="119.62158203125" layoutX="71.0" layoutY="441.0" strokeWidth="5.0" />
+            <Line endX="43.735107421875" endY="111.70675659179688" layoutX="227.0" layoutY="280.0" startX="43.735107421875" startY="300.2819519042969" strokeWidth="5.0" />
+            <Line fx:id="Hogwarts_2" endX="-241.28408813476562" endY="119.62158203125" layoutX="543.0" layoutY="300.0" startX="-26.968505859375" startY="233.98870849609375" strokeWidth="5.0" />
+            <Line fx:id="Hogwarts_3" endX="-241.28408813476562" endY="119.62158203125" layoutX="764.0" layoutY="297.0" startX="-241.28408813476562" startY="247.52365112304688" strokeWidth="5.0" />
+            <Line fx:id="Hogwarts_1" endX="-18.91339111328125" endY="247.523681640625" layoutX="551.0" layoutY="311.0" startX="-241.28408813476562" startY="247.52365112304688" strokeWidth="5.0" />
+            <Line fx:id="Duke_1" endX="-241.28408813476562" endY="119.62158203125" layoutX="777.0" layoutY="265.0" startX="-108.72369384765625" startY="119.62155151367188" strokeWidth="5.0" />
+            <Line fx:id="Duke_2" endX="-102.18878173828125" endY="143.60626220703125" layoutX="777.0" layoutY="265.0" startX="-102.18878173828125" startY="-14.861846923828125" strokeWidth="5.0" />
+            <Line fx:id="Hogwarts_4" endX="-102.18878173828125" endY="143.60626220703125" layoutX="662.0" layoutY="388.0" startX="15.3111572265625" startY="23.10626220703125" strokeWidth="5.0" />
+            <Button fx:id="MordorBtn" alignment="CENTER" layoutX="454.0" layoutY="342.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Mordor" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="MedkemiaBtn" alignment="CENTER" layoutX="229.0" layoutY="171.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Midkemia" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="NarniaBtn" alignment="CENTER" layoutX="-7.0" layoutY="173.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Narnia" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="ElantrisBtn" layoutX="-6.0" layoutY="361.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Elantris" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="ScadriaBtn" layoutX="224.0" layoutY="340.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Scadrial" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="RosharBtn" layoutX="226.0" layoutY="498.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Roshar" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="HogwartsBtn" layoutX="477.0" layoutY="497.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Hogwarts" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="OzBtn" alignment="CENTER" layoutX="411.0" layoutY="171.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Oz" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="GondorBtn" alignment="CENTER" layoutX="599.0" layoutY="174.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Gondor" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="DukeBtn" alignment="CENTER" layoutX="635.0" layoutY="346.0" mnemonicParsing="false" onAction="#showActionPanel" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Duke" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="actionPanel" layoutX="822.0" layoutY="150.0" prefHeight="600.0" prefWidth="400.0" visible="false">
+         <children>
+            <VBox fx:id="territoryInfo" prefHeight="350.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label fx:id="TerritoryNameLabel" text="Territory" textFill="#6b1010" wrapText="true">
+                     <font>
+                        <Font name="Nadeem Regular" size="20.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="ResourceLabel" text="Resource:" textFill="#6b1010" wrapText="true">
+                     <font>
+                        <Font name="Nadeem Regular" size="16.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="PromptLabel" text="Prompt" textFill="#6b1010" wrapText="true">
+                     <font>
+                        <Font name="Nadeem Regular" size="16.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="ErrorPromptLabel" text="Error" textFill="RED" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Nadeem Regular" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <ChoiceBox fx:id="actionType" layoutY="350.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="dst" layoutX="250.0" layoutY="350.0" onMouseClicked="#selectField" prefWidth="150.0" />
+            <TextField fx:id="UnitNumText" layoutY="450.0" prefHeight="50.0" prefWidth="200.0" promptText="Number of Unit">
+               <font>
+                  <Font name="Nadeem Regular" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="UnitTypeText" layoutX="200.0" layoutY="450.0" prefHeight="50.0" prefWidth="200.0" promptText="Type of Unit">
+               <font>
+                  <Font name="Nadeem Regular" size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="commitBtn" layoutX="270.0" layoutY="540.0" mnemonicParsing="false" onAction="#commitAction" prefHeight="60.0" prefWidth="130.0" text="Enter">
+               <font>
+                  <Font name="Nadeem Regular" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="backBtn" layoutY="540.0" mnemonicParsing="false" onAction="#backToMap" prefHeight="60.0" prefWidth="100.0" text="Back">
+               <font>
+                  <Font name="Nadeem Regular" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.duke.ece651.risc.controller.MapController">
+   <children>
+      <ImageView fx:id="mapBG" fitHeight="800.0" fitWidth="1280.0" opacity="0.9" pickOnBounds="true">
+         <image>
+            <Image url="@../image/risk_map_v1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="returnBtn" fitHeight="100.0" fitWidth="100.0" layoutX="1180.0" onMouseClicked="#returnToMenu" pickOnBounds="true">
+         <image>
+            <Image url="@../image/return.png" />
+         </image>
+      </ImageView>
+      <HBox fx:id="mapTitle" alignment="CENTER" layoutX="50.0" prefHeight="100.0" prefWidth="1100.0" spacing="20.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="foodLabel" alignment="CENTER" text="Food: 0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="30.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="techResourceLabel" alignment="CENTER" text="Tech Resource: 0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="30.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="techLevelLabel" alignment="CENTER" text="Tech Level: 1" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="30.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="cloakLabel" alignment="CENTER" text="Cloak: Off" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="30.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="gameMap" layoutX="58.0" layoutY="98.0" prefHeight="698.0" prefWidth="782.0">
+         <children>
+            <Button fx:id="MordorBtn" alignment="CENTER" layoutX="495.0" layoutY="318.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Mordor" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="MedkemiaBtn" alignment="CENTER" layoutX="263.0" layoutY="157.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Midkemia" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="NarniaBtn" alignment="CENTER" layoutX="1.0" layoutY="73.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Narnia" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="ElantrisBtn" layoutX="84.0" layoutY="444.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Elantris" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="ScadriaBtn" layoutX="295.0" layoutY="327.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Scadrial" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="RosharBtn" layoutX="379.0" layoutY="536.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Roshar" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="HogwartsBtn" layoutX="638.0" layoutY="573.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Hogwarts" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="OzBtn" alignment="CENTER" layoutX="476.0" layoutY="55.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Oz" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="GondorBtn" alignment="CENTER" layoutX="715.0" layoutY="136.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Gondor" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Button fx:id="DukeBtn" alignment="CENTER" layoutX="707.0" layoutY="356.0" mnemonicParsing="false" onAction="#showActionPanel" opacity="0.0" prefHeight="104.0" prefWidth="110.0" style="-fx-background-radius: 330; -fx-background-color: #1e90ff#1e90ff;" text="Duke" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Nadeem Regular" size="0.1" />
+               </font>
+            </Button>
+            <Rectangle fx:id="ElantrisFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="121.0" layoutY="550.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="HogwartsFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="688.0" layoutY="669.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="DukeFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="738.0" layoutY="460.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="RosharFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="427.0" layoutY="633.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="MordorFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="536.0" layoutY="421.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="GondorFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="762.0" layoutY="248.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="ScadrialFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="337.0" layoutY="435.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="OzFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="517.0" layoutY="160.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="MidkemiaFlag" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="304.0" layoutY="270.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="NarniaFlag" fill="DODGERBLUE" height="25.0" layoutX="46.0" layoutY="181.0" stroke="TRANSPARENT" strokeType="INSIDE" width="25.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="actionPanel" layoutX="960.0" layoutY="100.0" prefHeight="700.0" prefWidth="300.0" visible="false">
+         <children>
+            <VBox fx:id="territoryInfo" prefHeight="450.0" prefWidth="300.0" spacing="20.0">
+               <children>
+                  <Label fx:id="TerritoryNameLabel" text="Territory" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Nadeem Regular" size="20.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <Label fx:id="ResourceLabel" text="Resource:" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Nadeem Regular" size="12.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="SpyPromptLabel" alignment="TOP_LEFT" text="Spy:" textFill="#f5eeee" wrapText="true">
+                           <font>
+                              <Font name="Nadeem Regular" size="12.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="PromptLabel" text="Prompt" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Nadeem Regular" size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="ErrorPromptLabel" text="Error" textFill="RED" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Nadeem Regular" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <ChoiceBox fx:id="actionType" layoutY="450.0" prefWidth="120.0" />
+            <ChoiceBox fx:id="dst" layoutX="180.0" layoutY="450.0" onMouseClicked="#selectField" prefWidth="120.0" />
+            <TextField fx:id="UnitNumText" layoutX="100.0" layoutY="540.0" prefHeight="50.0" prefWidth="200.0" promptText="Number of Unit">
+               <font>
+                  <Font name="Nadeem Regular" size="20.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="UnitTypeText" layoutY="500.0" prefWidth="120.0" />
+            <Button fx:id="commitBtn" layoutX="170.0" layoutY="600.0" mnemonicParsing="false" onAction="#commitAction" prefHeight="60.0" prefWidth="130.0" text="Enter">
+               <font>
+                  <Font name="Nadeem Regular" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="backBtn" layoutY="600.0" mnemonicParsing="false" onAction="#backToMap" prefHeight="60.0" prefWidth="100.0" text="Back">
+               <font>
+                  <Font name="Nadeem Regular" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
